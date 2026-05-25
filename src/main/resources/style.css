@@ -1,0 +1,55 @@
+.root {
+    -fx-background-color: #121212;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Боковая панель */
+.side-bar {
+    -fx-background-color: #000000;
+    -fx-padding: 15;
+}
+
+/* Кнопки как у Spotify */
+.button {
+    -fx-background-color: #282828;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #3e3e3e;
+    -fx-scale-x: 1.05;
+    -fx-scale-y: 1.05;
+}
+
+/* Главная зеленая кнопка (Play) */
+.play-button {
+    -fx-background-color: #1DB954;
+    -fx-text-fill: black;
+    -fx-background-radius: 50;
+}
+
+/* Таблица треков */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background { -fx-background-color: transparent; }
+.table-view .column-header { -fx-background-color: transparent; }
+.table-view .column-header .label { -fx-text-fill: #b3b3b3; -fx-alignment: CENTER_LEFT; }
+
+.table-row-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-row-cell:filled:hover { -fx-background-color: #2a2a2a; }
+.table-row-cell:filled:selected { -fx-background-color: #5a5a5a; }
+
+/* Прогресс-бар (Slider) */
+.slider .track { -fx-background-color: #4d4d4d; }
+.slider .bar { -fx-background-color: #1DB954; }
+.slider .thumb { -fx-background-color: white; }

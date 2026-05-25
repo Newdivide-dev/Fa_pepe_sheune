@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.music.AuthController">
+    <padding><Insets bottom="40" left="40" right="40" top="40"/></padding>
+
+    <Label text="SOUNDWAVE" style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+    <TextField fx:id="usernameField" promptText="Логин" maxWidth="250"/>
+    <PasswordField fx:id="passwordField" promptText="Пароль" maxWidth="250"/>
+
+    <Button text="Войти" onAction="#handleLogin" prefWidth="250" style="-fx-background-color: #28a745; -fx-text-fill: white;"/>
+    <Hyperlink text="Регистрация" onAction="#handleRegisterNavigation"/>
+</VBox>
