@@ -8,11 +8,13 @@ import javafx.stage.Stage;
 
 public class MainApp extends Application {
     private static Stage primaryStage;
+
     @Override
     public void start(Stage stage) {
         primaryStage = stage;
         showScene("auth-view.fxml", "SoundWave - Вход");
     }
+
     public static void showScene(String fxml, String title) {
         try {
             FXMLLoader loader = new FXMLLoader(MainApp.class.getResource("/" + fxml));
@@ -23,16 +25,22 @@ public class MainApp extends Application {
             } else {
                 primaryStage.getScene().setRoot(root);
             }
+
             String css = MainApp.class.getResource("/style.css").toExternalForm();
             primaryStage.getScene().getStylesheets().clear();
             primaryStage.getScene().getStylesheets().add(css);
 
             primaryStage.setTitle(title);
+            primaryStage.setMinWidth(820);
+            primaryStage.setMinHeight(520);
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();
+            System.err.println("Не удалось загрузить сцену: " + fxml);
         }
     }
 
-    public static void main(String[] args) { launch(args); }
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
